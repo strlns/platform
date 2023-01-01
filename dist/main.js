@@ -22159,7 +22159,7 @@ ${e}`);
     }
     update(framesPassed) {
       let newX = (this.voltobal.x + framesPassed * 4) % SceneManager.width;
-      if (SceneManager.width - newX < 1) {
+      if (this.voltobal.x > newX) {
         newX = -1 * this.voltobal.width;
       }
       this.voltobal.x = newX;
